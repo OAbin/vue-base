@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue中双向数据绑定</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+
+<!--    双向数据绑定 v-model-->
+    <div id="root">
+        <input v-model = "content"/>
+        <div >{{content}}</div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#root",
+            data:{
+                content:"hello world!"
+            }
+        })
+    </script>
+</body>
+</html>

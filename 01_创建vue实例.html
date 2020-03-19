@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue 入门</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+<!--创建vue第一个实例-->
+    <div id="root">{{msg}}</div>
+
+    <script>
+        new Vue({
+            el: "#root",
+            data:{
+                msg : "hello world!"
+            }
+        })
+    </script>
+</body>
+</html>

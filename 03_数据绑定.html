@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue中数据绑定</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+
+<!--    显示数据的三种方法-->
+<!--    1、差插值表达式{{}} 2、v-text 3、v-html-->
+    <div id="root">
+        <div>{{content}}</div>
+        <div v-text="content"></div>
+        <div v-html= "content"></div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#root",
+            data:{
+                content : "<h1>hello world!</h1>"
+            }
+        })
+    </script>
+</body>
+</html>

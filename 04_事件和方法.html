@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue中事件和方法</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+<!--事件绑定 v-on: == @-->
+<!--方法 methods-->
+    <div id="root">
+        <div @click = "handleClick">{{content}}</div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#root",
+            data:{
+                content : "hello"
+            },
+            // 方法实现
+            methods:{
+                handleClick: function () {
+                    this.content = "world"
+                }
+            }
+        })
+    </script>
+</body>
+</html>

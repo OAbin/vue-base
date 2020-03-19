@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v_if和v_show的区别</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<!-- v-for用来循环集合使用-->
+    <div id="root">
+        <ul>
+            <li v-for = "item of list">{{item}}</li>
+            <!--提升性能 ,排序复杂的情况会有问题-->
+            <li v-for = "(item,index) of list" :key = "index">{{item}}</li>
+        </ul>
+    </div>
+
+
+    <script>
+
+        new Vue({
+            el:"#root",
+            data:{
+                list:[1,2,3,4]
+            }
+
+        })
+    </script>
+
+</body>
+</html>

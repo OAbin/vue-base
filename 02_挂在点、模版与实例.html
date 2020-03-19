@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>挂载点、模版、与实例之间的关系</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+<!--挂载点、模版与实例-->
+    <div id="root">
+    </div>
+
+    <script>
+        new Vue({ //实例
+            el:"#root",  //挂载点
+            template:'<h1>hello {{msg}}</h1>',
+            data:{
+                msg: "hello world!"
+            }
+        })
+    </script>
+</body>
+</html>

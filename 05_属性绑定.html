@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue中属性绑定</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+
+<!--    属性绑定 v-bind: == :-->
+    <div id="root">
+        <div :title = "title">{{content}}</div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#root",
+            data:{
+                content:"hello world!",
+                title : "this is hello world!"
+            }
+        })
+    </script>
+</body>
+</html>

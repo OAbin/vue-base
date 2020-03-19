@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v_if和v_show的区别</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<!-- v-if和v_show都是用来做显示隐藏使用
+     区别在于v-if是每次删除dom元素{适合不频繁的操作}
+            v-show是加属性display{适合频繁的操作}
+ -->
+    <div id="root">
+        <div v-if = "show">{{msg}}</div>
+        <div v-show = "show">{{msg}}</div>
+        <button @click = "handleClick">clickHere</button>
+    </div>
+
+
+    <script>
+
+        new Vue({
+
+            el:"#root",
+            data:{
+                show :true,
+                msg:"hello world!"
+            },
+            methods:{
+                handleClick: function () {
+                    this.show = !this.show;
+                }
+            }
+
+        })
+    </script>
+
+</body>
+</html>
